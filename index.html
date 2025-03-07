@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Ashok Kumar - Medical Education Expert</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="font-sans bg-gray-50">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+      <div class="flex items-center">
+        <span class="text-2xl font-bold text-blue-800">Dr. Ashok Kumar</span>
+      </div>
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="#about" class="text-gray-700 hover:text-blue-600 transition">About</a>
+        <a href="#courses" class="text-gray-700 hover:text-blue-600 transition">Courses</a>
+        <a href="#research" class="text-gray-700 hover:text-blue-600 transition">Research</a>
+        <a href="#testimonials" class="text-gray-700 hover:text-blue-600 transition">Testimonials</a>
+        <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">Contact Me</a>
+      </div>
+      <div class="md:hidden">
+        <button id="menu-toggle" class="text-gray-700">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden">
+      <div class="px-2 pt-2 pb-4 space-y-1 bg-white">
+        <a href="#about" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">About</a>
+        <a href="#courses" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Courses</a>
+        <a href="#research" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Research</a>
+        <a href="#testimonials" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Testimonials</a>
+        <a href="#contact" class="block px-3 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">Contact Me</a>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Hero Section -->
+  <header class="relative bg-gradient-to-r from-blue-800 to-indigo-900 text-white">
+    <div class="container mx-auto px-6 py-16 md:py-24 flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2 text-center md:text-left mb-12 md:mb-0">
+        <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">
+          Excellence in Medical Education & USMLE Preparation
+        </h1>
+        <p class="text-xl md:text-2xl mb-8">
+          PhD & Postdoctorate in Pathology with 15+ years of international teaching experience
+        </p>
+        <div class="flex flex-wrap gap-3 justify-center md:justify-start mb-8">
+          <span class="bg-blue-700 px-3 py-1 rounded-full text-sm">USMLE Coach</span>
+          <span class="bg-blue-700 px-3 py-1 rounded-full text-sm">Pathology Expert</span>
+          <span class="bg-blue-700 px-3 py-1 rounded-full text-sm">Researcher</span>
+          <span class="bg-blue-700 px-3 py-1 rounded-full text-sm">6 Languages</span>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <a href="#courses" class="bg-white text-blue-800 font-semibold px-6 py-3 rounded-md hover:bg-gray-100 transition">
+            Explore Courses
+          </a>
+          <a href="#contact" class="bg-transparent border-2 border-white text-white font-semibold px-6 py-3 rounded-md hover:bg-white hover:text-blue-800 transition">
+            Book a Consultation
+          </a>
+        </div>
+      </div>
+      <div class="md:w-1/2 flex justify-center">
+        <div class="relative">
+          <div class="bg-white p-2 rounded-full shadow-xl absolute -top-4 -left-4 z-10">
+            <img src="/api/placeholder/120/120" alt="Profile" class="rounded-full w-24 h-24 object-cover">
+          </div>
+          <div class="bg-blue-100 p-6 rounded-lg shadow-2xl">
+            <div class="aspect-w-16 aspect-h-9 mb-4">
+              <iframe class="w-full h-64 rounded-lg" src="https://www.youtube.com/embed/25IPr6gCYZU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <h3 class="text-blue-800 font-bold text-xl">Latest Lecture: USMLE Preparation</h3>
+            <p class="text-gray-700">Learn my proven strategies for USMLE success</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="absolute bottom-0 left-0 w-full overflow-hidden">
+      <svg preserveAspectRatio="none" width="100%" height="70" viewBox="0 0 1440 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 24L60 34C120 44 240 64 360 64C480 64 600 44 720 32C840 20 960 16 1080 24C1200 32 1320 52 1380 62L1440 74V74H1380C1320 74 1200 74 1080 74C960 74 840 74 720 74C600 74 480 74 360 74C240 74 120 74 60 74H0V24Z" fill="white"/>
+      </svg>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-800">About Dr. Ashok Kumar</h2>
+        <div class="w-16 h-1 mx-auto bg-blue-600 my-4"></div>
+        <p class="text-gray-600 max-w-2xl mx-auto">Professor of Pathology with international experience in teaching, research, and clinical practice.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-blue-50 rounded-lg p-6 shadow-md transform transition duration-300 hover:-translate-y-2">
+          <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4 mx-auto">
+            <i class="fas fa-graduation-cap text-white text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-center mb-2 text-gray-800">Education</h3>
+          <ul class="space-y-2 text-gray-600">
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+              <span>Postdoctorate, Goethe University Frankfurt, Germany</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+              <span>PhD in Pathology, Goethe University Frankfurt, Germany</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+              <span>Postgraduate Diploma in Clinical Pathology</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+              <span>MBBS, Liaquat University</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="bg-blue-50 rounded-lg p-6 shadow-md transform transition duration-300 hover:-translate-y-2">
+          <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4 mx-auto">
+            <i class="fas fa-chalkboard-teacher text-white text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-center mb-2 text-gray-800">Teaching Experience</h3>
+          <ul class="space-y-2 text-gray-600">
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+              <span>University of Medicine & Health Sciences, St. Kitts</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+              <span>Saint James School of Medicine, Anguilla</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+              <span>Faculty of Medicine, AIMST University, Malaysia</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+              <span>King Faisal University, Saudi Arabia</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="bg-blue-50 rounded-lg p-6 shadow-md transform transition duration-300 hover:-translate-y-2">
+          <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4 mx-auto">
+            <i class="fas fa-microscope text-white text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-center mb-2 text-gray-800">Expertise</h3>
+          <ul class="space-y-2 text-gray-600">
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+              <span>Vignette-based & PBL teaching methodologies</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+              <span>General & Systemic Pathology</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+              <span>Hematology & Molecular Biology</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+              <span>USMLE Preparation & Exam Strategy</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="mt-16">
+        <h3 class="text-2xl font-bold text-center mb-6 text-gray-800">Professional Journey</h3>
+        <div class="relative">
+          <!-- Timeline line -->
+          <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-200"></div>
+          
+          <!-- Timeline items -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div class="md:col-start-2 relative">
+              <div class="absolute left-0 md:left-auto md:right-full top-6 transform translate-x-1/2 md:-translate-x-8">
+                <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center z-10 border-4 border-white">
+                  <span class="text-white font-bold">1</span>
+                </div>
+              </div>
+              <div class="ml-8 md:ml-0 bg-white p-6 rounded-lg shadow-md">
+                <div class="font-bold text-blue-800">2021-2024</div>
+                <h4 class="text-lg font-bold mb-2">Course Director & Professor</h4>
+                <p class="text-gray-600">University of Medicine & Health Sciences, St. Kitts & Saint James School of Medicine, Anguilla</p>
+              </div>
+            </div>
+            
+            <div class="md:col-start-1 relative mt-8 md:mt-32">
+              <div class="absolute left-0 md:left-full top-6 transform translate-x-1/2 md:translate-x-8">
+                <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center z-10 border-4 border-white">
+                  <span class="text-white font-bold">2</span>
+                </div>
+              </div>
+              <div class="ml-8 md:mr-0 bg-white p-6 rounded-lg shadow-md">
+                <div class="font-bold text-blue-800">2016-2021</div>
+                <h4 class="text-lg font-bold mb-2">Associate Professor</h4>
+                <p class="text-gray-600">Faculty of Medicine, AIMST University, Malaysia</p>
+              </div>
+            </div>
+            
+            <div class="md:col-start-2 relative mt-8 md:mt-12">
+              <div class="absolute left-0 md:left-auto md:right-full top-6 transform translate-x-1/2 md:-translate-x-8">
+                <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center z-10 border-4 border-white">
+                  <span class="text-white font-bold">3</span>
+                </div>
+              </div>
+              <div class="ml-8 md:ml-0 bg-white p-6 rounded-lg shadow-md">
+                <div class="font-bold text-blue-800">2014-2016</div>
+                <h4 class="text-lg font-bold mb-2">Assistant Professor</h4>
+                <p class="text-gray-600">College of Medicine, King Faisal University, Saudi Arabia</p>
+              </div>
+            </div>
+            
+            <div class="md:col-start-1 relative mt-8 md:mt-32">
+              <div class="absolute left-0 md:left-full top-6 transform translate-x-1/2 md:translate-x-8">
+                <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center z-10 border-4 border-white">
+                  <span class="text-white font-bold">4</span>
+                </div>
+              </div>
+              <div class="ml-8 md:mr-0 bg-white p-6 rounded-lg shadow-md">
+                <div class="font-bold text-blue-800">2010-2014</div>
+                <h4 class="text-lg font-bold mb-2">Postdoctorate & Assistant Professor</h4>
+                <p class="text-gray-600">Goethe University Frankfurt, Germany & LUMHS, Pakistan</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Courses Section -->
+  <section id="courses" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-800">USMLE & Medical Exam Preparation</h2>
+        <div class="w-16 h-1 mx-auto bg-blue-600 my-4"></div>
+        <p class="text-gray-600 max-w-2xl mx-auto">Comprehensive courses designed for medical students and graduates preparing for their licensing examinations.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Course 1 -->
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg transform transition duration-300 hover:-translate-y-2">
+          <div class="relative">
+            <img src="/api/placeholder/400/250" alt="Pathology Course" class="w-full h-48 object-cover">
+            <div class="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+              Most Popular
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2 text-gray-800">Comprehensive Pathology</h3>
+            <div class="flex items-center mb-4">
+              <div class="flex text-yellow-400">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <span class="text-gray-600 ml-2">4.8 (156 reviews)</span>
+            </div>
+            <p class="text-gray-600 mb-4">Master general and systemic pathology with a focus on high-yield USMLE topics and vignette-style questions.</p>
+            <ul class="mb-6 space-y-2">
+              <li class="flex items-center text-gray-600">
+                <i class="fas fa-check text-green-500 mr-2"></i>
+                <span>24 video lectures</span>
+              </li>
+              <li class="flex items-center text-gray-600">
+                <i class="fas fa-check text-green-500 mr-2"></i>
+                <span>500+ practice questions</span>
+              </li>
+              <li class="flex items-center text-gray-600">
+                <i class="fas fa-check text-green-500 mr-2"></i>
+                <span>Case-based discussions</span>
+              </li>
+            </ul>
+            <a href="#contact" class="block w-full bg-blue-600 text-white text-center py-3 rounded-md font-semibold hover:bg-blue-700 transition">
+              Enroll Now
+            </a>
+          </div>
+        </div>
+        
+        <!-- Course 2 -->
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg transform transition duration-300 hover:-translate-y-2">
+          <div class="relative">
+            <img src="/api/placeholder/400/250" alt="Hematology Course" class="w-full h-48 object-cover">
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2 text-gray-800">Clinical Hematology</h3>
+            <div class="flex items-center mb-4">
+              <div class="flex text-yellow-400">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="text-gray-600 ml-2">5.0 (92 reviews)</span>
+            </div>
+            <p class="text-gray-600 mb-4">Deep dive into hematologic disorders, blood cell morphology, and laboratory diagnostics.</p>
+            <ul class="mb-6 space-y-2">
+              <li class="flex items-center text-gray-600">
+                <i class="fas fa-check text-green-500 mr-2"></i>
+                <span>18 video lectures</span>
+              </li>
+              <li class="flex items-center text-gray-600">
+                <i class="fas fa-check text-green-500 mr-2"></i>
+                <span>300+ practice questions</span>
+              </li>
+              <li class="flex items-center text-gray-600">
+                <i class="fas fa-check text-green-500 mr-2"></i>
+                <span>Blood smear analysis</span>
+              </li>
+            </ul>
+            <a href="#contact" class="block w-full bg-blue-600 text-white text-center py-3 rounded-md font-semibold hover:bg-blue-700 transition">
+              Enroll Now
+            </a>
+          </div>
+        </div>
+        
+        <!-- Course 3 -->
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg transform transition duration-300 hover:-translate-y-2">
+          <div class="relative">
+            <img src="/api/placeholder/400/250" alt="USMLE Step 1" class="w-full h-48 object-cover">
+            <div class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+              New
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2 text-gray-800">USMLE Step 1 Intensive</h3>
+            <div class="flex items-center mb-4">
+              <div class="flex text-yellow-400">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <span class="text-gray-600 ml-2">4.7 (78 reviews)</span>
+            </div>
+            <p class="text-gray-600 mb-4">Comprehensive preparation covering all major disciplines with a focus on high-yield content.</p>
+            <ul class="mb-6 space-y-2">
+              <li class="flex items-center text-gray-600">
+                <i class="fas fa-check text-green-500 mr-2"></i>
+                <span>45 video lectures</span>
+              </li>
+              <li class="flex items-center text-gray-600">
+                <i class="fas fa-check text-green-500 mr-2"></i>
+                <span>1000+ practice questions</span>
+              </li>
+              <li class="flex items-center text-gray-600">
+                <i class="fas fa-check text-green-500 mr-2"></i>
+                <span>One-on-one coaching</span>
+              </li>
+            </ul>
+            <a href="#contact" class="block w-full bg-blue-600 text-white text-center py-3 rounded-md font-semibold hover:bg-blue-700 transition">
+              Enroll Now
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Teaching Methodology -->
+      <div class="mt-16">
+        <h3 class="text-2xl font-bold text-center mb-8 text-gray-800">My Teaching Methodology</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="mb-4">
+              <h4 class="text-xl font-bold text-blue-800 mb-2">Vignette-Based Learning</h4>
+              <p class="text-gray-600">My approach uses clinical vignettes to develop your critical thinking and diagnostic skills - exactly what you'll need for USMLE success.</p>
+            </div>
+            <div>
+              <h4 class="text-xl font-bold text-blue-800 mb-2">Problem-Based Learning</h4>
+              <p class="text-gray-600">Collaborate with peers to work through complex clinical scenarios, developing both your knowledge base and clinical reasoning.</p>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="aspect-w-16 aspect-h-9">
+              <iframe class="w-full h-64 rounded-lg shadow-lg" src="https://www.youtube.com/embed/25IPr6gCYZU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-md absolute -bottom-8 right-8 max-w-xs">
+              <h4 class="font-bold text-blue-800">Watch My Teaching Style</h4>
+              <p class="text-gray-600 text-sm">Get a preview of my lecture approach and teaching methods</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Section -->
+  <section id="research" class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-800">Research & Publications</h2>
+        <div class="w-16 h-1 mx-auto bg-blue-600 my-4"></div>
+        <p class="text-gray-600 max-w-2xl mx-auto">Contributing to medical knowledge with over 21 peer-reviewed publications and multiple funded research projects.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div class="bg-blue-50 p-6 rounded-lg shadow-md transform transition duration-300 hover:-translate-y-2">
+          <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4 mx-auto">
+            <i class="fas fa-dna text-white text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-center mb-4 text-gray-800">Research Focus</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+              <span class="text-gray-600">Stem Cells & Cancer Research</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+              <span class="text-gray-600">Oncogene Studies</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+              <span class="text-gray-600">Systemic Diseases</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+              <span class="text-gray-600">Leukemia & Lymphoma</span>
+            </li>
+          </ul>
+        </div>
+<!--
+        <div class="bg-blue-50 p-6 rounded-lg shadow-md transform transition duration-300 hover:-translate-y-2">
+          <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4 mx-auto">
+            <i class="fas fa-flask text-white text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-center mb-4 text-gray-800">Laboratory Skills</h3>
+          <ul class="space-y-3">
+            <li class="flex items-
+			
+			-->
+			
+			
+</html>
