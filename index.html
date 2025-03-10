@@ -1,25 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dr. Ashok Kumar - Medical Education Expert</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    .animate-pulse-slow {
+      animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.8; }
+    }
+    .gradient-text {
+      background: linear-gradient(90deg, #2563eb, #4f46e5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hover-zoom:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+    }
+  </style>
 </head>
-<body class="font-sans bg-gray-50">
+<body class="font-sans bg-gray-50 relative">
   <!-- Navigation -->
   <nav class="bg-white shadow-md sticky top-0 z-50">
     <div class="container mx-auto px-6 py-3 flex justify-between items-center">
       <div class="flex items-center">
-        <span class="text-2xl font-bold text-blue-800">Dr. Ashok Kumar</span>
+        <span class="text-2xl font-bold gradient-text">Dr. Ashok Kumar</span>
       </div>
       <div class="hidden md:flex items-center space-x-8">
         <a href="#about" class="text-gray-700 hover:text-blue-600 transition">About</a>
         <a href="#courses" class="text-gray-700 hover:text-blue-600 transition">Courses</a>
         <a href="#research" class="text-gray-700 hover:text-blue-600 transition">Research</a>
         <a href="#testimonials" class="text-gray-700 hover:text-blue-600 transition">Testimonials</a>
-        <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">Contact Me</a>
+        <a href="#contact" class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white px-4 py-2 rounded-md hover:from-blue-700 hover:to-indigo-800 transition">Contact Me</a>
       </div>
       <div class="md:hidden">
         <button id="menu-toggle" class="text-gray-700">
@@ -34,32 +52,37 @@
         <a href="#courses" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Courses</a>
         <a href="#research" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Research</a>
         <a href="#testimonials" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Testimonials</a>
-        <a href="#contact" class="block px-3 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">Contact Me</a>
+        <a href="#contact" class="block px-3 py-2 bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-md hover:from-blue-700 hover:to-indigo-800 transition">Contact Me</a>
       </div>
     </div>
   </nav>
   
   <!-- Hero Section -->
   <header class="relative bg-gradient-to-r from-blue-800 to-indigo-900 text-white">
-    <div class="container mx-auto px-6 py-16 md:py-24 flex flex-col md:flex-row items-center">
+    <div class="absolute inset-0">
+      <div class="absolute inset-0 bg-blue-900 opacity-70"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-blue-800 to-indigo-900 opacity-90"></div>
+      <div class="absolute w-full h-full bg-[url('/api/placeholder/1920/1080')] bg-cover bg-center mix-blend-overlay opacity-20"></div>
+    </div>
+    <div class="container mx-auto px-6 py-16 md:py-24 flex flex-col md:flex-row items-center relative z-10">
       <div class="md:w-1/2 text-center md:text-left mb-12 md:mb-0">
-        <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">
-          Excellence in Medical Education & USMLE Preparation
+        <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4 animate-pulse-slow">
+          Excellence in Medical Education &amp; USMLE Preparation
         </h1>
         <p class="text-xl md:text-2xl mb-8">
-          PhD & Postdoctorate in Pathology with 15+ years of international teaching experience
+          PhD &amp; Postdoctorate in Pathology with 15+ years of international teaching experience
         </p>
         <div class="flex flex-wrap gap-3 justify-center md:justify-start mb-8">
-          <span class="bg-blue-700 px-3 py-1 rounded-full text-sm">USMLE Coach</span>
-          <span class="bg-blue-700 px-3 py-1 rounded-full text-sm">Pathology Expert</span>
-          <span class="bg-blue-700 px-3 py-1 rounded-full text-sm">Researcher</span>
-          <span class="bg-blue-700 px-3 py-1 rounded-full text-sm">6 Languages</span>
+          <span class="bg-blue-700 bg-opacity-70 backdrop-blur-sm px-3 py-1 rounded-full text-sm shadow-md">USMLE Coach</span>
+          <span class="bg-blue-700 bg-opacity-70 backdrop-blur-sm px-3 py-1 rounded-full text-sm shadow-md">Pathology Expert</span>
+          <span class="bg-blue-700 bg-opacity-70 backdrop-blur-sm px-3 py-1 rounded-full text-sm shadow-md">Researcher</span>
+          <span class="bg-blue-700 bg-opacity-70 backdrop-blur-sm px-3 py-1 rounded-full text-sm shadow-md">6 Languages</span>
         </div>
         <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-          <a href="#courses" class="bg-white text-blue-800 font-semibold px-6 py-3 rounded-md hover:bg-gray-100 transition">
+          <a href="#courses" class="bg-white text-blue-800 font-semibold px-6 py-3 rounded-md shadow-lg hover:bg-gray-100 hover:shadow-xl transition">
             Explore Courses
           </a>
-          <a href="#contact" class="bg-transparent border-2 border-white text-white font-semibold px-6 py-3 rounded-md hover:bg-white hover:text-blue-800 transition">
+          <a href="#contact" class="bg-transparent border-2 border-white text-white font-semibold px-6 py-3 rounded-md shadow-lg hover:bg-white hover:text-blue-800 transition">
             Book a Consultation
           </a>
         </div>
@@ -67,11 +90,11 @@
       <div class="md:w-1/2 flex justify-center">
         <div class="relative">
           <div class="bg-white p-2 rounded-full shadow-xl absolute -top-4 -left-4 z-10">
-            <img src="/api/placeholder/120/120" alt="Profile" class="rounded-full w-24 h-24 object-cover">
+            <img src="/api/placeholder/120/120" alt="Profile" class="rounded-full w-24 h-24 object-cover" />
           </div>
-          <div class="bg-blue-100 p-6 rounded-lg shadow-2xl">
+          <div class="bg-blue-100 p-6 rounded-lg shadow-2xl transform transition duration-300 hover:rotate-1">
             <div class="aspect-w-16 aspect-h-9 mb-4">
-              <iframe class="w-full h-64 rounded-lg" src="https://www.youtube.com/embed/25IPr6gCYZU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe class="w-full h-64 rounded-lg shadow-md" src="https://www.youtube.com/embed/25IPr6gCYZU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <h3 class="text-blue-800 font-bold text-xl">Latest Lecture: USMLE Preparation</h3>
             <p class="text-gray-700">Learn my proven strategies for USMLE success</p>
@@ -85,19 +108,20 @@
       </svg>
     </div>
   </header>
-
+  
   <!-- About Section -->
   <section id="about" class="py-16 bg-white">
     <div class="container mx-auto px-6">
       <div class="text-center mb-12">
         <h2 class="text-3xl font-bold text-gray-800">About Dr. Ashok Kumar</h2>
-        <div class="w-16 h-1 mx-auto bg-blue-600 my-4"></div>
+        <div class="w-16 h-1 mx-auto bg-gradient-to-r from-blue-600 to-indigo-700 my-4"></div>
         <p class="text-gray-600 max-w-2xl mx-auto">Professor of Pathology with international experience in teaching, research, and clinical practice.</p>
       </div>
       
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-blue-50 rounded-lg p-6 shadow-md transform transition duration-300 hover:-translate-y-2">
-          <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4 mx-auto">
+        <!-- Education -->
+        <div class="bg-gradient-to-b from-blue-50 to-white rounded-lg p-6 shadow-md transform transition duration-300 hover:-translate-y-2">
+          <div class="w-16 h-16 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-full flex items-center justify-center mb-4 mx-auto shadow-lg">
             <i class="fas fa-graduation-cap text-white text-2xl"></i>
           </div>
           <h3 class="text-xl font-bold text-center mb-2 text-gray-800">Education</h3>
@@ -120,9 +144,9 @@
             </li>
           </ul>
         </div>
-        
-        <div class="bg-blue-50 rounded-lg p-6 shadow-md transform transition duration-300 hover:-translate-y-2">
-          <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4 mx-auto">
+        <!-- Teaching Experience -->
+        <div class="bg-gradient-to-b from-blue-50 to-white rounded-lg p-6 shadow-md transform transition duration-300 hover:-translate-y-2">
+          <div class="w-16 h-16 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-full flex items-center justify-center mb-4 mx-auto shadow-lg">
             <i class="fas fa-chalkboard-teacher text-white text-2xl"></i>
           </div>
           <h3 class="text-xl font-bold text-center mb-2 text-gray-800">Teaching Experience</h3>
@@ -145,9 +169,9 @@
             </li>
           </ul>
         </div>
-        
-        <div class="bg-blue-50 rounded-lg p-6 shadow-md transform transition duration-300 hover:-translate-y-2">
-          <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4 mx-auto">
+        <!-- Expertise -->
+        <div class="bg-gradient-to-b from-blue-50 to-white rounded-lg p-6 shadow-md transform transition duration-300 hover:-translate-y-2">
+          <div class="w-16 h-16 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-full flex items-center justify-center mb-4 mx-auto shadow-lg">
             <i class="fas fa-microscope text-white text-2xl"></i>
           </div>
           <h3 class="text-xl font-bold text-center mb-2 text-gray-800">Expertise</h3>
@@ -172,63 +196,60 @@
         </div>
       </div>
       
+      <!-- Professional Journey Timeline -->
       <div class="mt-16">
         <h3 class="text-2xl font-bold text-center mb-6 text-gray-800">Professional Journey</h3>
         <div class="relative">
           <!-- Timeline line -->
-          <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-200"></div>
-          
+          <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-700"></div>
           <!-- Timeline items -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <div class="md:col-start-2 relative">
               <div class="absolute left-0 md:left-auto md:right-full top-6 transform translate-x-1/2 md:-translate-x-8">
-                <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center z-10 border-4 border-white">
+                <div class="w-12 h-12 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-full flex items-center justify-center z-10 border-4 border-white shadow-md">
                   <span class="text-white font-bold">1</span>
                 </div>
               </div>
-              <div class="ml-8 md:ml-0 bg-white p-6 rounded-lg shadow-md">
+              <div class="ml-8 md:ml-0 bg-white p-6 rounded-lg shadow-md hover-zoom">
                 <div class="font-bold text-blue-800">2021-2024</div>
                 <h4 class="text-lg font-bold mb-2">Course Director & Professor</h4>
                 <p class="text-gray-600">University of Medicine & Health Sciences, St. Kitts & Saint James School of Medicine, Anguilla</p>
               </div>
             </div>
-            
             <div class="md:col-start-1 relative mt-8 md:mt-32">
               <div class="absolute left-0 md:left-full top-6 transform translate-x-1/2 md:translate-x-8">
-                <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center z-10 border-4 border-white">
+                <div class="w-12 h-12 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-full flex items-center justify-center z-10 border-4 border-white shadow-md">
                   <span class="text-white font-bold">2</span>
                 </div>
               </div>
-              <div class="ml-8 md:mr-0 bg-white p-6 rounded-lg shadow-md">
+              <div class="ml-8 md:mr-0 bg-white p-6 rounded-lg shadow-md hover-zoom">
                 <div class="font-bold text-blue-800">2016-2021</div>
                 <h4 class="text-lg font-bold mb-2">Associate Professor</h4>
                 <p class="text-gray-600">Faculty of Medicine, AIMST University, Malaysia</p>
               </div>
             </div>
-            
             <div class="md:col-start-2 relative mt-8 md:mt-12">
               <div class="absolute left-0 md:left-auto md:right-full top-6 transform translate-x-1/2 md:-translate-x-8">
-                <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center z-10 border-4 border-white">
+                <div class="w-12 h-12 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-full flex items-center justify-center z-10 border-4 border-white shadow-md">
                   <span class="text-white font-bold">3</span>
                 </div>
               </div>
-              <div class="ml-8 md:ml-0 bg-white p-6 rounded-lg shadow-md">
+              <div class="ml-8 md:ml-0 bg-white p-6 rounded-lg shadow-md hover-zoom">
                 <div class="font-bold text-blue-800">2014-2016</div>
                 <h4 class="text-lg font-bold mb-2">Assistant Professor</h4>
                 <p class="text-gray-600">College of Medicine, King Faisal University, Saudi Arabia</p>
               </div>
             </div>
-            
             <div class="md:col-start-1 relative mt-8 md:mt-32">
               <div class="absolute left-0 md:left-full top-6 transform translate-x-1/2 md:translate-x-8">
-                <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center z-10 border-4 border-white">
+                <div class="w-12 h-12 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-full flex items-center justify-center z-10 border-4 border-white shadow-md">
                   <span class="text-white font-bold">4</span>
                 </div>
               </div>
-              <div class="ml-8 md:mr-0 bg-white p-6 rounded-lg shadow-md">
+              <div class="ml-8 md:mr-0 bg-white p-6 rounded-lg shadow-md hover-zoom">
                 <div class="font-bold text-blue-800">2010-2014</div>
                 <h4 class="text-lg font-bold mb-2">Postdoctorate & Assistant Professor</h4>
-                <p class="text-gray-600">Goethe University Frankfurt, Germany & LUMHS, Pakistan</p>
+                <p class="text-gray-600">Goethe University Frankfurt, Germany &amp; LUMHS, Pakistan</p>
               </div>
             </div>
           </div>
@@ -236,13 +257,13 @@
       </div>
     </div>
   </section>
-
+  
   <!-- Courses Section -->
   <section id="courses" class="py-16 bg-gray-50">
     <div class="container mx-auto px-6">
       <div class="text-center mb-12">
         <h2 class="text-3xl font-bold text-gray-800">USMLE & Medical Exam Preparation</h2>
-        <div class="w-16 h-1 mx-auto bg-blue-600 my-4"></div>
+        <div class="w-16 h-1 mx-auto bg-gradient-to-r from-blue-600 to-indigo-700 my-4"></div>
         <p class="text-gray-600 max-w-2xl mx-auto">Comprehensive courses designed for medical students and graduates preparing for their licensing examinations.</p>
       </div>
       
@@ -250,8 +271,9 @@
         <!-- Course 1 -->
         <div class="bg-white rounded-lg overflow-hidden shadow-lg transform transition duration-300 hover:-translate-y-2">
           <div class="relative">
-            <img src="/api/placeholder/400/250" alt="Pathology Course" class="w-full h-48 object-cover">
-            <div class="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+            <img src="/api/placeholder/400/250" alt="Pathology Course" class="w-full h-48 object-cover" />
+            <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black to-transparent opacity-40"></div>
+            <div class="absolute top-4 right-4 bg-gradient-to-r from-blue-600 to-indigo-700 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-md">
               Most Popular
             </div>
           </div>
@@ -282,7 +304,7 @@
                 <span>Case-based discussions</span>
               </li>
             </ul>
-            <a href="#contact" class="block w-full bg-blue-600 text-white text-center py-3 rounded-md font-semibold hover:bg-blue-700 transition">
+            <a href="#contact" class="block w-full bg-gradient-to-r from-blue-600 to-indigo-700 text-white text-center py-3 rounded-md font-semibold hover:from-blue-700 hover:to-indigo-800 transition shadow-md">
               Enroll Now
             </a>
           </div>
@@ -291,7 +313,8 @@
         <!-- Course 2 -->
         <div class="bg-white rounded-lg overflow-hidden shadow-lg transform transition duration-300 hover:-translate-y-2">
           <div class="relative">
-            <img src="/api/placeholder/400/250" alt="Hematology Course" class="w-full h-48 object-cover">
+            <img src="/api/placeholder/400/250" alt="Hematology Course" class="w-full h-48 object-cover" />
+            <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black to-transparent opacity-40"></div>
           </div>
           <div class="p-6">
             <h3 class="text-xl font-bold mb-2 text-gray-800">Clinical Hematology</h3>
@@ -320,7 +343,7 @@
                 <span>Blood smear analysis</span>
               </li>
             </ul>
-            <a href="#contact" class="block w-full bg-blue-600 text-white text-center py-3 rounded-md font-semibold hover:bg-blue-700 transition">
+            <a href="#contact" class="block w-full bg-gradient-to-r from-blue-600 to-indigo-700 text-white text-center py-3 rounded-md font-semibold hover:from-blue-700 hover:to-indigo-800 transition shadow-md">
               Enroll Now
             </a>
           </div>
@@ -329,8 +352,9 @@
         <!-- Course 3 -->
         <div class="bg-white rounded-lg overflow-hidden shadow-lg transform transition duration-300 hover:-translate-y-2">
           <div class="relative">
-            <img src="/api/placeholder/400/250" alt="USMLE Step 1" class="w-full h-48 object-cover">
-            <div class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+            <img src="/api/placeholder/400/250" alt="USMLE Step 1" class="w-full h-48 object-cover" />
+            <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black to-transparent opacity-40"></div>
+            <div class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-md">
               New
             </div>
           </div>
@@ -361,7 +385,7 @@
                 <span>One-on-one coaching</span>
               </li>
             </ul>
-            <a href="#contact" class="block w-full bg-blue-600 text-white text-center py-3 rounded-md font-semibold hover:bg-blue-700 transition">
+            <a href="#contact" class="block w-full bg-gradient-to-r from-blue-600 to-indigo-700 text-white text-center py-3 rounded-md font-semibold hover:from-blue-700 hover:to-indigo-800 transition shadow-md">
               Enroll Now
             </a>
           </div>
@@ -372,13 +396,13 @@
       <div class="mt-16">
         <h3 class="text-2xl font-bold text-center mb-8 text-gray-800">My Teaching Methodology</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div class="bg-white p-6 rounded-lg shadow-md">
+          <div class="bg-white p-6 rounded-lg shadow-md hover-zoom">
             <div class="mb-4">
-              <h4 class="text-xl font-bold text-blue-800 mb-2">Vignette-Based Learning</h4>
-              <p class="text-gray-600">My approach uses clinical vignettes to develop your critical thinking and diagnostic skills - exactly what you'll need for USMLE success.</p>
+              <h4 class="text-xl font-bold gradient-text mb-2">Vignette-Based Learning</h4>
+              <p class="text-gray-600">My approach uses clinical vignettes to develop your critical thinking and diagnostic skills—exactly what you'll need for USMLE success.</p>
             </div>
             <div>
-              <h4 class="text-xl font-bold text-blue-800 mb-2">Problem-Based Learning</h4>
+              <h4 class="text-xl font-bold gradient-text mb-2">Problem-Based Learning</h4>
               <p class="text-gray-600">Collaborate with peers to work through complex clinical scenarios, developing both your knowledge base and clinical reasoning.</p>
             </div>
           </div>
@@ -387,7 +411,7 @@
               <iframe class="w-full h-64 rounded-lg shadow-lg" src="https://www.youtube.com/embed/25IPr6gCYZU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="bg-white p-4 rounded-lg shadow-md absolute -bottom-8 right-8 max-w-xs">
-              <h4 class="font-bold text-blue-800">Watch My Teaching Style</h4>
+              <h4 class="font-bold gradient-text">Watch My Teaching Style</h4>
               <p class="text-gray-600 text-sm">Get a preview of my lecture approach and teaching methods</p>
             </div>
           </div>
@@ -395,108 +419,148 @@
       </div>
     </div>
   </section>
-
-  <!-- Research Section -->
-  <section id="research" class="py-16 bg-white">
-    <div class="container mx-auto px-6">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-gray-800">Research & Publications</h2>
-        <div class="w-16 h-1 mx-auto bg-blue-600 my-4"></div>
-        <p class="text-gray-600 max-w-2xl mx-auto">Contributing to medical knowledge with over 21 peer-reviewed publications and multiple funded research projects.</p>
-      </div>
-      
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-        <div class="bg-blue-50 p-6 rounded-lg shadow-md transform transition duration-300 hover:-translate-y-2">
-          <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4 mx-auto">
-            <i class="fas fa-dna text-white text-2xl"></i>
-          </div>
-          <h3 class="text-xl font-bold text-center mb-4 text-gray-800">Research Focus</h3>
-          <ul class="space-y-3">
-            <li class="flex items-start">
-              <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-              <span class="text-gray-600">Stem Cells & Cancer Research</span>
-            </li>
-            <li class="flex items-start">
-              <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-              <span class="text-gray-600">Oncogene Studies</span>
-            </li>
-            <li class="flex items-start">
-              <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-              <span class="text-gray-600">Systemic Diseases</span>
-            </li>
-            <li class="flex items-start">
-              <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-              <span class="text-gray-600">Leukemia & Lymphoma</span>
-            </li>
-          </ul>
-        </div>
-<!--
-        <div class="bg-blue-50 p-6 rounded-lg shadow-md transform transition duration-300 hover:-translate-y-2">
-          <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4 mx-auto">
-            <i class="fas fa-flask text-white text-2xl"></i>
-          </div>
-          <h3 class="text-xl font-bold text-center mb-4 text-gray-800">Laboratory Skills</h3>
-          <ul class="space-y-3">
-            <li class="flex items-
-
-
-
-	      <!-- Contact Section -->
-<section id="contact" class="py-16 bg-blue-50">
+  
+<!-- Research Section -->
+<section id="research" class="py-16 bg-white">
   <div class="container mx-auto px-6">
     <div class="text-center mb-12">
-      <h2 class="text-3xl font-bold text-gray-800">Get In Touch</h2>
-      <div class="w-16 h-1 mx-auto bg-blue-600 my-4"></div>
-      <p class="text-gray-600 max-w-2xl mx-auto">Feel free to reach out for inquiries about my courses, consultations, or collaboration opportunities.</p>
+      <h2 class="text-3xl font-bold text-gray-800">Research &amp; Publications</h2>
+      <div class="w-16 h-1 mx-auto bg-gradient-to-r from-blue-600 to-indigo-700 my-4"></div>
+      <p class="text-gray-600 max-w-2xl mx-auto">
+        Contributing to medical knowledge with over 21 peer-reviewed publications and multiple funded research projects.
+      </p>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <!-- Contact Details -->
-      <div class="bg-white rounded-lg p-6 shadow-md">
-        <h3 class="text-xl font-bold text-gray-800 mb-4">Contact Information</h3>
-        <ul class="space-y-4">
-          <li class="flex items-center text-gray-600">
-            <i class="fas fa-phone-alt text-blue-600 mr-3"></i>
-            <span>+1 (555) 123-4567</span>
-          </li>
-          <li class="flex items-center text-gray-600">
-            <i class="fas fa-envelope text-blue-600 mr-3"></i>
-            <span>dr.ashok@medicaleducation.com</span>
-          </li>
-          <li class="flex items-center text-gray-600">
-            <i class="fas fa-map-marker-alt text-blue-600 mr-3"></i>
-            <span>123 Medical Lane, Springfield, USA</span>
-          </li>
-        </ul>
-      </div>
-      <!-- Social Media Links -->
-      <div class="bg-white rounded-lg p-6 shadow-md">
-        <h3 class="text-xl font-bold text-gray-800 mb-4">Connect Online</h3>
-        <ul class="space-y-4">
-          <li class="flex items-center text-gray-600">
-            <i class="fab fa-linkedin text-blue-600 mr-3"></i>
-            <a href="https://www.linkedin.com/in/dr-ashok-kumar" target="_blank" class="hover:text-blue-800 transition">LinkedIn</a>
-          </li>
-          <li class="flex items-center text-gray-600">
-            <i class="fab fa-twitter text-blue-600 mr-3"></i>
-            <a href="https://twitter.com/drashokkumar" target="_blank" class="hover:text-blue-800 transition">Twitter</a>
-          </li>
-          <li class="flex items-center text-gray-600">
-            <i class="fab fa-facebook text-blue-600 mr-3"></i>
-            <a href="https://facebook.com/drashokkumar" target="_blank" class="hover:text-blue-800 transition">Facebook</a>
-          </li>
-        </ul>
-      </div>
-      <!-- Contact Form -->
-      <div class="bg-white rounded-lg p-6 shadow-md">
-        <h3 class="text-xl font-bold text-gray-800 mb-4">Send a Message</h3>
-        
-      </div>
+    <!-- Scrollable list of publications -->
+    <div class="max-h-96 overflow-y-auto">
+      <ul class="list-disc list-inside space-y-4 text-gray-700">
+        <li>
+          <strong>Frequency of non-organ specific autoantibodies in untreated naïve chronic HCV patients.</strong>
+          Submitted in BMJ Open Science, October 2024.
+        </li>
+        <li>
+          <strong>Kumar A, Sengodan B, Lal C, Leela A, Fernandez K.</strong>
+          Polyclonal T Lymphocytes Transform into Malignant Cells by Retroviral Mediated Transfer of p21SNFT Gene. Journal of Young Pharmacists, 2020;12(1):71.
+        </li>
+        <li>
+          <strong>Alhiwaishil HM, Kumar A, Alrufayi AH, Alsuliman AA, Lal C.</strong>
+          Sickle Cell Trait and Disease in Anaemic Patients, Visiting Health Care Centre, KFU, Al Hasa. Med Forum 2019;30(5):27-30.
+        </li>
+        <li>
+          <strong>Sridevi Chigurupati, Muralidhar Reddy Marri, Ashok Kumar, et al.</strong>
+          Bacterial Endo-Symbiont Inhabiting Durio zibethinus leaves and their Antibacterial Potential. IJPRIF, 2018:11(03), 198-205.
+        </li>
+        <li>
+          <strong>Ashok Kumar et al.</strong>
+          γ‑retroviral mediated NPM‑ALK transfer in polyclonal T cells causes loss of surface markers with monoclonal cancerous transformation. Clin Exp Pharmacol 2017, 7:6(Suppl). DOI: 10.4172/2161-1459-C1-025.
+        </li>
+        <li>
+          <strong>Ashok et al.</strong>
+          Pretreatment variations in haematological parameters of breast cancer patients. Int J Pharm Pharm Sci, 2018:10(2), 157-161.
+        </li>
+        <li>
+          <strong>Kumar A, Al Arifi AL.</strong>
+          Assessment of prevalence and haematological parameters of colorectal cancer patients at a tertiary care hospital, Al Ahsa, KSA. Med.Forum 2017;28(2):64-67.
+        </li>
+        <li>
+          <strong>Kumar A, Alhiwaishil HM, Alsuliman AA.</strong>
+          Prevalence of Glucose‑6‑phosphate Dehydrogenase Deficiency in People Visiting Health Care Center, KFU, Al‑Hasa. Med.Forum, May 2016;27(4):40-43.
+        </li>
+        <li>
+          <strong>Kumar A.</strong>
+          Malignant transformation of mature T cells after Gammaretrovirus mediated transfer of nucleophosmin‑anaplastic lymphoma kinase oncogene. Indian J Pathol Microbiol 2015 Jul‑Sep;58:301-6.
+        </li>
+        <li>
+          <strong>Abdul Malik Tareen, Muhammad Qasim, Yasmeen Akhtar, Sarwar Pirkani, Ashok Kumar.</strong>
+          Prevalence of typhoid fever in Quetta, Baluchistan, Pakistan. J. App. Em. Sc. Vol 5, Issue 2, December 2014.
+        </li>
+        <li>
+          <strong>Kuvardina, Kumar A (co‑author).</strong>
+          RUNX1 represses the erythroid gene expression program during megakaryocytic differentiation. Blood. 2015 Jun 4;125(23):3570-9.
+        </li>
+        <li>
+          <strong>Ashok Kumar, Rukhsar A Shahani.</strong>
+          Frequency of Hepatitis E among Patients Visiting Rural Health Centre Ranipur Sind. Med.Forum, Feb. 2014:25(2):27-29.
+        </li>
+        <li>
+          <strong>Bilal Ahmed, Muhammad Iqbal, Ashok Kumar.</strong>
+          An effective combined therapy of Meglumine antimoniate and co‑trimoxazole for cutaneous leishmaniasis: A case study in Quetta city. Journal of Pakistan Association of Dermatologists, 2014:24(2),122-126.
+        </li>
+        <li>
+          <strong>Saira Baloch, Ashok Kumar.</strong>
+          Neurotoxic effects of elevated CSF Aspartic and Glutamic Acids in Cerebral Malarial Patients. J Neurol Neurophysiol 2014, 5:5.
+        </li>
+        <li>
+          <strong>Manzoor Ali Abro, Rehana Naz Syed, Annela Yasmin, Shoukat Abro, Ashok Kumar, Philippe C. Nicot.</strong>
+          Different nitrogen fertilization regimes influences the susceptibility of lettuce plants to Botrytis cinerea and Sclerotinia sclerotium. Science International Lahore 26 (1):325-329, 2014.
+        </li>
+        <li>
+          <strong>M. Qasim Memon, Ashok Kumar.</strong>
+          Fructose mystery: How good or bad is it? Pak. J. Pharm. Sci., Vol.26, No.6, Nov. 2013, pp.1241-1245.
+        </li>
+        <li>
+          <strong>Ashok Kumar, et al.</strong>
+          Evaluation of Serum Lipid Profile During The Trimesters of Pregnancy. MedForum Monthly, Nov. 2013.
+        </li>
+        <li>
+          <strong>Ashok Kumar, et al.</strong>
+          Gammaretrovirus mediated transfer of p21SNFT causes malignant transformation of mature T cells. Indo American Journal IAJPR, 2013 Jul 31, p.5001-12.
+        </li>
+        <li>
+          <strong>Herglotz J, Kuvardina ON, Kolodziej S, Kumar A, Lausen J.</strong>
+          Histone arginine methylation keeps RUNX1 target genes in an intermediate state. Oncogene. 2012 Jul 9. DOI: 10.1038/onc.2012.274.
+        </li>
+        <li>
+          <strong>Newrzela S, Al‑Ghaili N, Heinrich T, Petkova M, Hartmann S, Kumar A, von Laer D.</strong>
+          T‑cell receptor diversity prevents T‑cell lymphoma development. Leukemia. 2012 May 30. DOI: 10.1038/leu.2012.142.
+        </li>
+      </ul>
     </div>
   </div>
 </section>
 
-			
-			-->
-			
-			
+  
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-800">Get in Touch</h2>
+        <div class="w-16 h-1 mx-auto bg-gradient-to-r from-blue-600 to-indigo-700 my-4"></div>
+        <p class="text-gray-600 max-w-2xl mx-auto">Feel free to reach out for consultations or inquiries.</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <a href="https://wa.me/18697644766" target="_blank" class="flex items-center space-x-4 bg-green-500 hover:bg-green-600 transition text-white px-6 py-3 rounded-full shadow-lg">
+          <i class="fab fa-whatsapp fa-lg"></i>
+          <span>Chat on WhatsApp: +1 (869) 764-4766</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="bg-white shadow-inner py-6">
+    <div class="container mx-auto px-6 text-center">
+      <p class="text-gray-600">&copy; 2025 Dr. Ashok Kumar. All rights reserved.</p>
+      <div class="mt-4 flex justify-center space-x-4">
+        <a href="https://wa.me/18697644766" target="_blank" class="text-green-500 hover:text-green-600">
+          <i class="fab fa-whatsapp fa-lg"></i>
+        </a>
+        <!-- Add other social icons if desired -->
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/18697644766" target="_blank" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg z-50">
+    <i class="fab fa-whatsapp fa-2x"></i>
+  </a>
+  
+  <!-- Optional: Script to toggle mobile menu -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
 </html>
